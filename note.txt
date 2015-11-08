@@ -1,0 +1,126 @@
+<?php echo $header; ?>以echo方式引入模板
+
+
+头部：
+
+文字排版方向：$direction
+语言： $lang
+title: $title
+网站主页：$base
+关键词： $keywords
+描述： $description (可先判断值是否存在)
+
+联系我们链接: $contact
+联系电话： $telephone
+
+注册地址： $login
+登陆地址： $register
+
+我的账户链接： $account
+我的账户文本： $text_account
+我的订单链接： $order
+我的订单文本： $text_$order
+交易链接： $transaction
+交易文本： $text_transaction
+下载链接： $download
+下载文本： $text_download
+退出登录链接： $logout
+退出登录文本： $text_logout
+
+收藏夹链接： $wishlist
+收藏夹文本： $text_wishlist
+购物车链接： $shopping_cart
+购物车文本(Shopping Cart)： $text_shopping_cart
+checkout链接： $checkout
+checkout文本： $text_checkout
+Logo路径： $logo
+主页地址： $home
+网站名称： $name
+
+币种：
+币种信息集合： $currencies 
+币种符号前置： $currency['symbol_left']
+币种符号后置：$currency['symbol_left']
+切换币种的标题： $text_currency
+币种全称： $currency['title']
+币种缩写： $currency['code']
+<input type="hidden" name="code" value="" />
+<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+
+语言：
+语言信息集合： $languages
+语言缩写： $language['code']
+语言图标： $language['image']
+语言全称： $language['name']
+切换语言的标题： $text_language
+<input type="hidden" name="code" value="" />
+<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
+
+搜索：
+input value: $search
+placeholder: $text_search
+
+购物车：
+购物车汇总信息(eg: "0 item(s) - £0.00")：$text_items
+循环产品信息，前提先行判断 if ($products || $vouchers)
+商品信息集合： $products
+商品链接： $product['href']
+商品缩略图路径： $product['thumb']
+商品名称： $product['name']
+商品数量： $product['quantity']
+单项商品总价： $product['total']
+商品ID： $product['cart_id']
+删除按钮： $button_remove
+商品总价集合： $totals
+总价文本： $total['title']
+总价数值： $total['text']
+购物车页面链接： $cart
+购物车文本(View Cart)： $text_cart
+
+未知: $product['recurring'] ????
+	  $text_recurring
+	  $voucher相关
+
+产品属性选项集合： $product['option']
+if ($product['option']
+foreach ($product['option'] as $option)
+属性名： $option['name']
+属性值： $option['value']
+购物车无商品(Your shopping cart is empty!): $text_empty
+
+导航栏：
+分类集合： $categories
+目录文本(Categories)：$text_category
+foreach ($categories as $category)
+判断含有子分类： if ($category['children'])
+分类名： $category['name']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+模块：
+
+轮播图：
+foreach ($banners as $banner)
+banner链接： $banner['link']
+banner标题： $banner['title']
+banner路径： $banner['image']
